@@ -1,0 +1,106 @@
+.main {}
+
+/* --------------------------------------- */
+.top {
+    margin: 2em;
+}
+
+/* --------------------------------------- */
+.title {
+    color: #FFFFFF;
+}
+
+.randomPassword {
+    color: #10B981;
+}
+
+.hint {
+    /* font-family: 'Inter'; */
+    font-style: normal;
+    font-weight: 400;
+    color: #D5D4D8;
+}
+
+/* --------------------------------------- */
+.generateSection {
+    display: flex;
+    flex-direction: row;
+}
+
+.inputSection {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.35em;
+}
+
+.generateButton {
+
+    justify-content: center;
+    align-items: center;
+    padding: 0.7em 1em;
+    margin: 0.5em 0.75em 0.5em 2em;
+    color: rgba(255, 255, 255, 0.85);
+
+    background: #10B981;
+    /* shadow/sm */
+
+    border-radius: 5px;
+    border: solid #10B981 2px;
+    font-weight: 500;
+    font-size: 15px;
+    /* line-height: 24px; */
+}
+
+.generateButton:hover {
+    border: 2px solid #D5D4D8;
+}
+
+.setLength {
+    justify-content: center;
+    align-items: center;
+    padding: 0.7em;
+    margin: 0.75em 0.5em;
+    height: 1em;
+    width: 2em;
+    border-radius: 5px;
+    border: solid #10B981 0;
+    background: #D5D4D8;
+}
+
+.passwordsSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+    grid-row-gap: 1em;
+    margin: 2em;
+}
+
+.solid {
+    border: 1px solid #2F3E53;
+    margin: 2em
+}
+
+.generatedPassword {
+    background: #273549;
+    border-radius: 6px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+
+    text-align: center;
+
+    color: #55F991;
+    border: solid 2px #2F3E53;
+}
+
+.generatedPassword:hover {
+    background: #10B981;
+    border: 2px solid #D5D4D8;
+}
+
+.inputParagraph {
+    color: #D5D4D8;
+}
