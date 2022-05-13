@@ -3,9 +3,9 @@
     <h1 class="title">
       Generate a <span class="randomPassword"> <br> random password </span>
     </h1>
-    <h4 class="hint">
+    <h5 class="hint">
       Never use an insecure password again.
-    </h4>
+    </h5>
   </div>
 
   <div class="generateSection">
@@ -14,16 +14,25 @@
     </button>
     <div class="inputSection">
       <p class="inputParagraph"> Set the length of the passwords: </p>
-      <input id="passwordLength" class="setLength" src="text" placeholder="#15">
+      <input type="number" id="passwordLength" class="setLength" src="text" placeholder="#15" maxlength="6"
+        pattern="[0-9]{6}" size="6">
     </div>
   </div>
 
   <hr class="solid">
   <div class="passwordsSection">
-    <button id="firstPassword" class="generatedPassword" (click)="putFirstTextContentToClipboard()">-</button>
-    <button id="secondPassword" class="generatedPassword" (click)="putSecondTextContentToClipboard()">-</button>
-    <button id="thirdPassword" class="generatedPassword" (click)="putThirdTextContentToClipboard()">-</button>
-    <button id="fourthPassword" class="generatedPassword" (click)="putFourthTextContentToClipboard()">-</button>
+    <button id="firstPassword" type="button" class="generatedPassword btn btn-outline-secondary me-2 button-tooltip"
+      ngbTooltip="The selected password is on clipboard" [autoClose]="true" triggers="manual" #t="ngbTooltip"
+      (click)="t.open()" (click)="putFirstTextContentToClipboard()">-</button>
+    <button id="secondPassword" type="button" class="generatedPassword btn btn-outline-secondary me-2 button-tooltip"
+      ngbTooltip="The selected password is on clipboard" [autoClose]="true" triggers="manual" #t="ngbTooltip"
+      (click)="t.open()" (click)="putSecondTextContentToClipboard()">-</button>
+    <button id="thirdPassword" type="button" class="generatedPassword btn btn-outline-secondary me-2 button-tooltip"
+      ngbTooltip="The selected password is on clipboard" [autoClose]="true" triggers="manual" #t="ngbTooltip"
+      (click)="t.open()" (click)="putThirdTextContentToClipboard()">-</button>
+    <button id="fourthPassword" type="button" class="generatedPassword btn btn-outline-secondary me-2 button-tooltip"
+      ngbTooltip="The selected password is on clipboard" [autoClose]="true" triggers="manual" #t="ngbTooltip"
+      (click)="t.open()" (click)="putFourthTextContentToClipboard()">-</button>
 
   </div>
 </div>
