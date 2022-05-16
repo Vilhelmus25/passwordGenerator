@@ -21,18 +21,13 @@
 
   <hr class="solid">
   <div class="passwordsSection">
-    <button id="firstPassword" type="button" class="generatedPassword btn btn-outline-secondary me-2 button-tooltip"
-      ngbTooltip="The selected password is on clipboard" [autoClose]="true" triggers="manual" #t="ngbTooltip"
-      (click)="t.open()" (click)="putFirstTextContentToClipboard()">-</button>
-    <button id="secondPassword" type="button" class="generatedPassword btn btn-outline-secondary me-2 button-tooltip"
-      ngbTooltip="The selected password is on clipboard" [autoClose]="true" triggers="manual" #t="ngbTooltip"
-      (click)="t.open()" (click)="putSecondTextContentToClipboard()">-</button>
-    <button id="thirdPassword" type="button" class="generatedPassword btn btn-outline-secondary me-2 button-tooltip"
-      ngbTooltip="The selected password is on clipboard" [autoClose]="true" triggers="manual" #t="ngbTooltip"
-      (click)="t.open()" (click)="putThirdTextContentToClipboard()">-</button>
-    <button id="fourthPassword" type="button" class="generatedPassword btn btn-outline-secondary me-2 button-tooltip"
-      ngbTooltip="The selected password is on clipboard" [autoClose]="true" triggers="manual" #t="ngbTooltip"
-      (click)="t.open()" (click)="putFourthTextContentToClipboard()">-</button>
-
+    <button id="firstPassword" type="button" class="generatedPassword btn" tooltip="This password will be on clipboard"
+      placement="top" theme="light" [show-delay]="10" (click)="putFirstTextContentToClipboard()">-</button>
+    <button id="secondPassword" type="button" class="generatedPassword btn" tooltip="This password will be on clipboard"
+      placement="top" theme="light" [show-delay]="10" (click)="putSecondTextContentToClipboard()">-</button>
+    <button id="thirdPassword" type="button" class="generatedPassword btn" tooltip="This password will be on clipboard"
+      placement="bottom" theme="light" [show-delay]="10" (click)="putThirdTextContentToClipboard()">-</button>
+    <button id="fourthPassword" type="button" class="generatedPassword btn" tooltip="This password will be on clipboard"
+      placement="bottom" theme="light" [show-delay]="10" (click)="putFourthTextContentToClipboard()">-</button>
   </div>
 </div>
