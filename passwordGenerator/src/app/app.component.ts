@@ -12,17 +12,6 @@ export class AppComponent {
   @ViewChild('tooltip')
   tooltip!: MatTooltip;
 
-  isTooltipDisabled: boolean = true;
-
-  setDiasbled() {
-    this.tooltip.disabled;
-  }
-
-  showTooltip() {
-    this.tooltip.show();
-    this.isTooltipDisabled = false;
-  }
-
   title = 'passwordGenerator';
 
   passwordLength = 15;
@@ -68,19 +57,15 @@ export class AppComponent {
 
   putFirstTextContentToClipboard() {
     this.clipboard.copy((<HTMLInputElement>document.getElementById('firstPassword')).innerText);
-    this.showTooltip();
   }
   putSecondTextContentToClipboard() {
     this.clipboard.copy((<HTMLInputElement>document.getElementById('secondPassword')).innerText);
-    this.showTooltip();
   }
   putThirdTextContentToClipboard() {
     this.clipboard.copy((<HTMLInputElement>document.getElementById('thirdPassword')).innerText);
-    this.showTooltip();
   }
   putFourthTextContentToClipboard() {
     this.clipboard.copy((<HTMLInputElement>document.getElementById('fourthPassword')).innerText);
-    this.showTooltip();
   }
 
 }

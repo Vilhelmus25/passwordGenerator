@@ -67,6 +67,13 @@
     background: #D5D4D8;
 }
 
+.hintToClick {
+    display: flex;
+    flex-direction: row;
+    margin: 0 1.75em;
+    color: #D5D4D8;
+}
+
 .passwordsSection {
     display: grid;
     grid-template-columns: 1fr 1fr;
