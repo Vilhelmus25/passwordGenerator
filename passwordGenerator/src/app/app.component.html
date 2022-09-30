@@ -12,6 +12,12 @@
     <button (click)="startGenerate()" class="generateButton">
       🎲 Generate password
     </button>
+    <div class="radioSection">
+          <input class="specialChar" type="radio" id="specialChar" name="special_Characters" value="AllowSpecialCharacters" [checked]="false"> <label for="specialChar">Allow Special Characters</label>
+          <br>
+          <input class="specialChar" type="radio" id="specialChar" name="special_Characters" value="WithoutSpecialCharacters" [checked]="true"> <label for="specialChar">Without Special Characters</label>
+          
+    </div>
     <div class="inputSection">
       <p class="inputParagraph"> Set the length of the passwords: </p>
       <input type="number" id="passwordLength" class="setLength" src="text" placeholder="#15" maxlength="6"
