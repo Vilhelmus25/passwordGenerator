@@ -14,13 +14,38 @@
     </button>
     <div class="inputSection">
       <p class="inputParagraph"> Set the length of the passwords: </p>
-      <input type="number" id="passwordLength" class="setLength" src="text" placeholder="#15" maxlength="6"
-        pattern="[0-9]{6}" size="6">
+      <!-- <input type="number" id="passwordLength" class="setLength" src="text" placeholder="#15" maxlength="6"
+        pattern="[0-9]{6}" size="6"> -->
+      <input [(ngModel)]="lengthOfPassword.password" class="setLength" id="passwordLength" value="passwordLength"
+        src="text" type="number" placeholder="#15" pattern="[0-9]{6}" size="6">
+
+      <div>
+        <label class="selectionLabel">Allowed Characters:</label>
+        <label class="selection">{{selectedCharacterArray.selection}}</label>
+      </div>
+      <legend>Please select your preferred password generation method first:</legend>
+
+      <input [(ngModel)]="selectedCharacterArray.selection" value="All" type="radio"> All
+
+      <input [(ngModel)]="selectedCharacterArray.selection" value="NoSpecials" type="radio">NoSpecials
+
+      <input [(ngModel)]="selectedCharacterArray.selection" value="NoCapitals" type="radio"> NoCapitals
+
+      <input [(ngModel)]="selectedCharacterArray.selection" value="NoDigits" type="radio"> NoDigits
+
+      <input [(ngModel)]="selectedCharacterArray.selection" value="NoDigitsNoSpecials" type="radio"> NoDigitsNoSpecials
+
+      <input [(ngModel)]="selectedCharacterArray.selection" value="NoDigitsNoCapitals" type="radio"> NoDigitsNoCapitals
+
+      <input [(ngModel)]="selectedCharacterArray.selection" value="NoSpecialsNoCapitals" type="radio">
+      NoSpecialsNoCapitals
+
+      <input [(ngModel)]="selectedCharacterArray.selection" value="OnlyNonCapitals" type="radio"> OnlyNonCapitals
     </div>
   </div>
 
   <hr class="solid">
-  <h3 class="hintToClick"> Click on of the generated passwords to put it on clipboard! 👇 </h3>
+  <h3 class="hintToClick"> Click on one of the generated passwords to copy it to clipboard! 👇 </h3>
 
   <div class="passwordsSection">
     <button id="firstPassword" type="button" class="generatedPassword btn" tooltip="Copied to clipboard" placement="top"
